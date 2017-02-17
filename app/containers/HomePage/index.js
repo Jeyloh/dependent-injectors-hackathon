@@ -8,11 +8,12 @@
  * reloading is not a necessity for you then you can refactor it and remove
  * the linting exception.
  */
-
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import Sidebar from './../LoginScreen/LoginScreen'
+import LoginScreen from './../LoginScreen/index';
+import styled from 'styled-components';
+
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -26,7 +27,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
         <AppWrapper>
           LoginScreen
-          <h1><FormattedMessage {...messages.header} /></h1>
 
         </AppWrapper>
     );
