@@ -12,13 +12,23 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import Sidebar from './../LoginScreen/LoginScreen'
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
+
+    const AppWrapper = styled.div `
+        background: #666;
+    `;
+
+
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+
+        <AppWrapper>
+          LoginScreen
+          <h1><FormattedMessage {...messages.header} /></h1>
+
+        </AppWrapper>
     );
   }
 }
