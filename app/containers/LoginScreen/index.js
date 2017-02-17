@@ -9,17 +9,25 @@ export default class LoginScreen extends React.PureComponent { // eslint-disable
 
   render() {
 
-    const TitleText = styled.h2`
+    const TitleHeader = styled.h2`
         color: #d9d9d9;
+        font-weight: 100;
+    `;
+    const LoginLabel = styled.label`
+        color: #d9d9d9;
+        font-weight: 200;
+
     `;
     const InputField = styled.input `
         border: none;
         border-bottom: white 1px solid;
+        border-opacity: 0.
         width: 80%;
         color: white;
     `;
     const LoginWrapper = styled.div `
         background: #666;
+        padding: 2em;
     `;
     const LoginForm = styled.form `
         display: block;
@@ -29,8 +37,9 @@ export default class LoginScreen extends React.PureComponent { // eslint-disable
 
     return (
       <LoginWrapper>
-        <TitleText>Logg inn i Sykkelportalen</TitleText>
+        <TitleHeader>Sykkelportalen</TitleHeader>
         <LoginForm>
+            <LoginLabel></LoginLabel>
             <InputField type="text" title="username" placeholder="username" />
             <InputField type="password" title="password" placeholder="password" />
             <button type="submit" class="btn">Login</button>
