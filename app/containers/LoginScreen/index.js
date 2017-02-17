@@ -24,16 +24,34 @@ export default class LoginScreen extends React.PureComponent { // eslint-disable
         border-opacity: 0.
         width: 80%;
         color: white;
+        padding: 1em;
     `;
     const LoginWrapper = styled.div `
         background: #666;
         padding: 2em;
+
     `;
     const LoginForm = styled.form `
         display: block;
         width: 100%;
-        padding: 2em;
+        padding: 4em;
+        padding-top: 8em;
+        flex-direction: column;
+        display: flex;
+        border: red solid 1px;
+        align-items: center;
+
+
     `;
+    const LoginButton = styled.button `
+        width: 40%;
+        height: 3em;
+    `;
+    const FBLoginButton = styled.button `
+        width: 60%;
+        height: 3em;
+    `;
+
 
     return (
       <LoginWrapper>
@@ -42,8 +60,11 @@ export default class LoginScreen extends React.PureComponent { // eslint-disable
             <LoginLabel></LoginLabel>
             <InputField type="text" title="username" placeholder="username" />
             <InputField type="password" title="password" placeholder="password" />
-            <button type="submit" class="btn">Login</button>
-            <a class="forgot" href="#">Forgot Username?</a>
+            <LoginButton type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Login</LoginButton>
+            <a className="forgot" href="#">Forgot Username?</a>
+            <FBLoginButton type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Login</FBLoginButton>
+
+
         </LoginForm>
 
       </LoginWrapper>

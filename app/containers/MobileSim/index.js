@@ -18,17 +18,25 @@ import styled from 'styled-components';
 export default class MobileSim extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
 
+      // Standard mobile resolution
     const MobileWrapper = styled.div `
-        background: #666;
         height: 843px;
         width: 400px;
+    `;
+    const AppWrapper = styled.div `
+        background: #666;
+        height: inherit;
+        width: inherit;
     `;
 
 
     return (
 
         <MobileWrapper>
-          <LoginScreen></LoginScreen>
+            <AppWrapper>
+                <LoginScreen></LoginScreen>
+            </AppWrapper>
+
 
         </MobileWrapper>
     );
