@@ -1,5 +1,5 @@
 /*
- * HomePage
+ * MobileSim
  *
  * This is the first thing users see of our App, at the '/' route
  *
@@ -15,20 +15,30 @@ import LoginScreen from './../LoginScreen/index';
 import styled from 'styled-components';
 
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export default class MobileSim extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
 
+      // Standard mobile resolution
+    const MobileWrapper = styled.div `
+        height: 843px;
+        width: 400px;
+    `;
     const AppWrapper = styled.div `
         background: #666;
+        height: inherit;
+        width: inherit;
     `;
 
 
     return (
 
-        <AppWrapper>
-          LoginScreen
+        <MobileWrapper>
+            <AppWrapper>
+                <LoginScreen></LoginScreen>
+            </AppWrapper>
 
-        </AppWrapper>
+
+        </MobileWrapper>
     );
   }
 }
