@@ -12,6 +12,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import LoginScreen from './../LoginScreen/index';
+import SimpleMap from './../SimpleMaps/index'
 import styled from 'styled-components';
 
 
@@ -23,7 +24,7 @@ export default class MobileSim extends React.PureComponent { // eslint-disable-l
         height: 843px;
         width: 400px;
     `;
-    const AppWrapper = styled.div `
+    const AppDefaults = styled.div `
         background: #666;
         height: inherit;
         width: inherit;
@@ -33,11 +34,9 @@ export default class MobileSim extends React.PureComponent { // eslint-disable-l
     return (
 
         <MobileWrapper>
-            <AppWrapper>
+            <AppDefaults>
                 <LoginScreen></LoginScreen>
-            </AppWrapper>
-
-
+            </AppDefaults>
         </MobileWrapper>
     );
   }
