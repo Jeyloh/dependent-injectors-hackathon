@@ -8,6 +8,11 @@
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
 
+// Material Design Lite Styling
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+// import './styles/main.css';
+
 // Import all the third party stuff
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -16,9 +21,7 @@ import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { useScroll } from 'react-router-scroll';
 import 'sanitize.css/sanitize.css';
-// Material Design Lite Styling
-import 'react-mdl/extra/material.css';
-import 'react-mdl/extra/material.js';
+
 
 // Import root app
 import App from 'containers/App';
