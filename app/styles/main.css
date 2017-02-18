@@ -1,0 +1,5 @@
+body , * {
+    margin: 0;
+    background-image: "../app/img/bg.png"
+    color:red;
+}
